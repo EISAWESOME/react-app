@@ -1,0 +1,179 @@
+/* Fonts */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(https://fonts.gstatic.com/s/robotoslab/v7/BngRUXZYTXPIvIBgJJSb6u9mxLCGwRg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufN5qA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(https://fonts.gstatic.com/s/robotoslab/v7/BngRUXZYTXPIvIBgJJSb6u92w7CGwRg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
+/* Body */
+body {
+  background-color: transparent;
+  /* Hack to enable hardware acceleration*/
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  /* Konami Code */
+}
+body div.main {
+  margin-top: 15vh;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+body div.main .constr {
+  max-height: 40px;
+  font-family: "Lato", sans-serif;
+  background: transparent;
+  text-align: center;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* IE fallback */
+  color: white;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: 10px;
+  margin-bottom: 1%;
+}
+body div.main .profileCard {
+  margin: auto;
+  background-image: linear-gradient(150deg, #1f4eab 0%, #733298 100%, #8f87bb 100%);
+  background-size: cover;
+  min-width: 270px;
+  min-height: 270px;
+  /* Fluid square */
+  width: calc(25vw + 25vh);
+  height: calc(25vw + 25vh);
+  transform-style: preserve-3d;
+  transition: all linear 0.1s;
+}
+body div.main .profileCard #avatar {
+  width: 100%;
+}
+body div.main .profileCard #avatar img {
+  margin: auto;
+  width: 100%;
+  /* Necessary for IE*/
+  height: 100%;
+  height: auto;
+  border-radius: 50%;
+  max-width: 40%;
+}
+body div.main .profileCard #catchPhrase {
+  width: 100%;
+  font-family: "Roboto Slab", sans-serif;
+  text-align: center;
+  font-size: calc(20px + 2.5vw);
+  color: #c4c8bc;
+}
+body div.main .profileCard #links {
+  width: 100%;
+  /* Hover filter */
+}
+body div.main .profileCard #links img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+body div.main .profileCard #links .scale-small {
+  transition: transform .2s;
+  height: auto;
+  max-width: 50%;
+}
+body div.main .profileCard #links .github:hover,
+body div.main .profileCard #links .github:active,
+body div.main .profileCard #links .resume:hover,
+body div.main .profileCard #links .resume:active {
+  transform: scale(1.1);
+  filter: invert(100%);
+}
+body div.main .profileCard #links .linkedin:hover {
+  transform: scale(1.1);
+  filter: brightness(50%) sepia(100) saturate(70) hue-rotate(180deg);
+}
+body div.main .tetris {
+  height: 100%;
+  width: 100%;
+  transition: all linear 1s 1s;
+}
+body div.main .tetris .game {
+  top: 0;
+  height: 100%;
+  width: 40%;
+}
+body .kcode {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -120px;
+  opacity: 0.25;
+  filter: alpha(opacity=25);
+}
+.ng-hide {
+  transition: all linear 1s;
+  opacity: 0;
+}
+/**
+Animation de l'opacité au chargement de la page
+ */
+.animate-opacity {
+  animation: opac 1.3s;
+}
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Media queries */
+@media (max-width: 1000px) {
+  .game {
+    width: 70vw;
+  }
+}
+@media (max-width: 580px) {
+  .constr {
+    font-size: 20px !important;
+    letter-spacing: 6px !important;
+  }
+}
+@media (max-width: 300px) {
+  .constr {
+    font-size: 13px !important;
+    letter-spacing: 4px !important;
+  }
+}

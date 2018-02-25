@@ -1,0 +1,173 @@
+/* Fonts */
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700';
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700';
+
+/* Body */
+@gradient-base : #1f4eab;
+@gradient-mid : mix(@gradient-base, mediumvioletred);
+@gradient-end : mix(@gradient-base, pink);
+
+
+body {
+	background-color: transparent;
+	/* Hack to enable hardware acceleration*/
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+
+	div.main {
+		margin-top: 15vh;
+		background-color: transparent;
+		width: 100%;
+		height: 100%;
+
+		.constr {
+			max-height: 40px;
+
+			font-family: "Lato", sans-serif;
+			background: transparent;
+			text-align: center;
+			background: -webkit-linear-gradient(white, #38495a);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			/* IE fallback */
+			color: white;
+
+			font-weight: 300;
+			font-size: 30px;
+			letter-spacing: 10px;
+			margin-bottom: 1%;
+		}
+
+		.profileCard {
+			margin:auto;
+			background-image: linear-gradient(150deg, @gradient-base 0%, @gradient-mid 100%, @gradient-end 100%);
+			background-size: cover;
+
+			min-width: 270px;
+			min-height: 270px;
+			/* Fluid square */
+			width: calc(25vw + 25vh);
+			height: calc(25vw + 25vh);
+
+			transform-style: preserve-3d;
+
+			transition: all linear 0.1s;
+
+			#avatar{
+				width: 100%;
+				img {
+					margin: auto;
+					width: 100%;
+					/* Necessary for IE*/
+					height: 100%;
+					height: auto;
+					border-radius: 50%;
+					max-width: 40%;
+				}
+			}
+
+			#catchPhrase {
+				width: 100%;
+				font-family: "Roboto Slab", sans-serif;
+				text-align: center;
+				font-size: calc(20px + 2.5vw);
+				color: #c4c8bc;
+			}
+			#links {
+				width: 100%;
+				img {
+					margin-left: auto;
+					margin-right: auto;
+					display: block;
+				}
+
+				.scale-small {
+					transition: transform .2s;
+					height: auto;
+					max-width: 50%;
+				}
+
+				/* Hover filter */
+				.github:hover, .github:active,
+				.resume:hover, .resume:active {
+					transform: scale(1.1);
+					filter: invert(100%);
+				}
+
+				.linkedin:hover {
+					transform: scale(1.1);
+					filter: brightness(50%) sepia(100) saturate(70) hue-rotate(180deg);
+				}
+			}
+		}
+		.tetris {
+			height: 100%;
+			width: 100%;
+			transition: all linear 1s 1s;
+
+			.game {
+				top: 0;
+				height: 100%;
+				width: 40%;
+			}
+		}
+	}
+
+	/* Konami Code */
+	.kcode {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -120px;
+
+		opacity: 0.25;
+		filter: alpha(opacity=25);
+	}
+}
+
+
+.ng-hide {
+	transition: all linear 1s;
+	opacity: 0;
+}
+
+/**
+Animation de l'opacité au chargement de la page
+ */
+.animate-opacity {
+	animation: opac 1.3s
+}
+
+@keyframes opac {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+
+/* Media queries */
+@media (max-width: 1000px) {
+	.game {
+		width: 70vw;
+	}
+}
+
+@media (max-width: 580px) {
+	.constr {
+		font-size: 20px !important;
+		letter-spacing: 6px !important;
+	}
+}
+
+@media (max-width: 300px) {
+	.constr {
+		font-size: 13px !important;
+		letter-spacing: 4px !important;
+	}
+}

@@ -3,10 +3,9 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:300,400,700';
 
 /* Body */
-@gradient-base : #1f4eab;
-@gradient-mid : mix(@gradient-base, mediumvioletred);
-@gradient-end : mix(@gradient-base, pink);
-
+@gradient-base: #1f4eab;
+@gradient-mid: mix(@gradient-base, mediumvioletred);
+@gradient-end: mix(@gradient-base, pink);
 
 body {
 	background-color: transparent;
@@ -42,7 +41,7 @@ body {
 		}
 
 		.profileCard {
-			margin:auto;
+			margin: auto;
 			background-image: linear-gradient(150deg, @gradient-base 0%, @gradient-mid 100%, @gradient-end 100%);
 			background-size: cover;
 
@@ -56,7 +55,7 @@ body {
 
 			transition: all linear 0.1s;
 
-			#avatar{
+			#avatar {
 				width: 100%;
 				img {
 					margin: auto;
@@ -74,7 +73,18 @@ body {
 				font-family: "Roboto Slab", sans-serif;
 				text-align: center;
 				font-size: calc(20px + 2.5vw);
-				color: #c4c8bc;
+
+				.chrome {
+					background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+					background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+					-webkit-background-size: 200px;
+					color: rgba(255, 255, 255, 0.3);
+					-webkit-background-clip: text;
+					-webkit-animation-name: shine;
+					-webkit-animation-duration: 5s;
+					-webkit-animation-iteration-count: infinite;
+					text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+				}
 			}
 			#links {
 				width: 100%;
@@ -119,7 +129,6 @@ body {
 	/* Konami Code */
 	.kcode {
 		position: absolute;
-		bottom: 0;
 		left: 50%;
 		margin-left: -120px;
 
@@ -127,7 +136,6 @@ body {
 		filter: alpha(opacity=25);
 	}
 }
-
 
 .ng-hide {
 	transition: all linear 1s;
@@ -150,6 +158,20 @@ Animation de l'opacité au chargement de la page
 	}
 }
 
+@-webkit-keyframes shine {
+	0%, 10% {
+		background-position: -1000px;
+	}
+	20% {
+		background-position: top left;
+	}
+	90% {
+		background-position: top right;
+	}
+	100% {
+		background-position: 1000px;
+	}
+}
 
 /* Media queries */
 @media (max-width: 1000px) {

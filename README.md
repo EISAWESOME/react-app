@@ -2,8 +2,8 @@
 
 ------
 
--Run a http-server on the build folder
+- Run a http-server on the build folder
 
--???
+- ???
 
 - $$$ Profit $$$ 

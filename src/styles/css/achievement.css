@@ -1,6 +1,7 @@
 
 .achievement-container{
   position : fixed;
+  top: 0;
   background: transparent;
   transform: scale(0.7);
 

@@ -1,4 +1,11 @@
 import React, {Component} from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
+
+
 import './styles/css/app.css'
 import './styles/css/stars.css';
 import './styles/css/achievement.css';
@@ -17,7 +24,6 @@ import xbJingle from './resources/sounds/AchievementUnlocked.mp3';
 //Konami
 import Konami from 'Konami';
 
-import PropTypes from 'prop-types';
 
 class App extends Component {
     render() {
@@ -91,20 +97,22 @@ class EasterEgg extends Component {
     render() {
         const self = this;
         new Konami(function () {
+            //If The easter egg has not been triggered
+            if(!self.state.triggered){
+                //Trigger it and play the jingle
 
-            console.log('Triggered ? ', self);
-            self.toggleState();
-
-            const jingle = new Howl({
-                src: [xbJingle],
-                volume: 0.5
-            });
-            jingle.play();
+                self.toggleState();
+                const jingle = new Howl({
+                    src: [xbJingle],
+                    volume: 0.5
+                });
+                jingle.play();
+            }
         });
 
         return (
             <div>
-                { this.state.triggered ?
+                { self.state.triggered ?
 
                 <div className="achievement-container">
                     <div className="achievement achievement-banner">
@@ -120,11 +128,11 @@ class EasterEgg extends Component {
                     </div>
                 </div>
 
-                    :
+                :
 
                 <img className="kcode" src={kcodeLogo}/>
-
                 }
+
             </div>
         );
     }

@@ -17,7 +17,8 @@ body {
 	transform: translateZ(0);
 
 	div.main {
-		margin-top: 15vh;
+		margin-top : calc(((100vh - calc(25vw + 25vh)) / 2 ) - 20px);
+		margin-top : calc(((100vh - 70vmin) / 2 ) - 20px);
 		background-color: transparent;
 		width: 100%;
 		height: 100%;
@@ -51,6 +52,9 @@ body {
 			width: calc(25vw + 25vh);
 			height: calc(25vw + 25vh);
 
+			width : 70vmin;
+			height : 70vmin;
+
 			transform-style: preserve-3d;
 
 			transition: all linear 0.1s;
@@ -69,10 +73,11 @@ body {
 			}
 
 			#catchPhrase {
-				width: 100%;
+
+				margin: auto;
+				width: 80%;
 				font-family: "Roboto Slab", sans-serif;
 				text-align: center;
-				font-size: calc(20px + 2.5vw);
 
 				.chrome {
 					background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
@@ -131,15 +136,21 @@ body {
 		position: absolute;
 		left: 50%;
 		margin-left: -120px;
+		bottom : 0;
 
 		opacity: 0.25;
 		filter: alpha(opacity=25);
 	}
 }
 
-.ng-hide {
-	transition: all linear 1s;
-	opacity: 0;
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 /**
@@ -158,7 +169,7 @@ Animation de l'opacité au chargement de la page
 	}
 }
 
-@-webkit-keyframes shine {
+@keyframes shine {
 	0%, 10% {
 		background-position: -1000px;
 	}

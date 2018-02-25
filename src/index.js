@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var Main = require('./App.js').main;
-var Easteregg = require('./App.js').easterEgg;
+const Stars = require('./profile.js').Stars;
+const Profile = require('./profile.js').Rrofile;
+const Easteregg = require('./profile.js').EasterEgg;
 
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Main/>, document.querySelector('#root'));
-ReactDOM.render(<Easteregg />, document.querySelector('#easterEgg'));
+ReactDOM.render(
+    <Stars />, document.querySelector('#root'));
 registerServiceWorker();

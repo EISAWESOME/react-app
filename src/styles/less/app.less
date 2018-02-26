@@ -3,11 +3,12 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:300,400,700';
 
 /* Body */
-@gradient-base: #1f4eab;
-@gradient-mid: mix(@gradient-base, mediumvioletred);
-@gradient-end: mix(@gradient-base, pink);
+@gradient-base: #2202ab;
+@gradient-mid: mix(@gradient-base, #ed17a1);
+@gradient-end: mix(@gradient-base, #69fcff);
 
 body {
+
 	background-color: transparent;
 	/* Hack to enable hardware acceleration*/
 	-webkit-transform: translateZ(0);
@@ -15,6 +16,8 @@ body {
 	-ms-transform: translateZ(0);
 	-o-transform: translateZ(0);
 	transform: translateZ(0);
+
+	overflow-x: hidden;
 
 	div.main {
 		margin-top : calc(((100vh - calc(25vw + 25vh)) / 2 ) - 20px);
@@ -62,18 +65,18 @@ body {
 			#avatar {
 				width: 100%;
 				img {
+					display: block;
 					margin: auto;
 					width: 100%;
 					/* Necessary for IE*/
 					height: 100%;
 					height: auto;
 					border-radius: 50%;
-					max-width: 40%;
+					max-width: 45%;
 				}
 			}
 
 			#catchPhrase {
-
 				margin: auto;
 				width: 80%;
 				font-family: "Roboto Slab", sans-serif;

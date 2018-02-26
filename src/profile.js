@@ -7,6 +7,8 @@ import './styles/css/achievement.css';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
+import Img from 'react-image';
+
 import ghLogo from './img/github.png';
 import liLogo from './img/linkedin.png';
 import reLogo from './img/resume.png';
@@ -19,8 +21,8 @@ import xbJingle from './resources/sounds/AchievementUnlocked.mp3';
 //Konami
 import Konami from 'Konami';
 
-
 class Profile extends Component {
+
     render() {
 
         document.title = "Clément S - React";
@@ -30,14 +32,15 @@ class Profile extends Component {
 
         const catchPhrase = "<clement-s/>";
 
+
         return (
             <div className="animate-opacity main container align-items-center">
                 <div className="constr"> EN CONSTRUCTION</div>
 
-                <div className="profileCard row no-gutters align-items-center">
+                <div className="profileCard chrome row no-gutters align-items-center">
 
                     <div id="avatar" className="row no-gutters align-items-center">
-                        <img src={avatarUrl} className="col " alt="Avatar"/>
+                        <Img className="col" src={avatarUrl}/>
                     </div>
                     <div id="catchPhrase" className="row no-gutters">
                         <span className="col chrome">
@@ -50,19 +53,19 @@ class Profile extends Component {
 
                         <div className="col">
                             <a href="https://github.com/EISAWESOME">
-                                <img className="scale-small github" src={ghLogo} alt="GitHub"/>
+                                <Img className="scale-small github" src={ghLogo} alt="GitHub"/>
                             </a>
                         </div>
 
                         <div className="col">
                             <a href="https://www.linkedin.com/in/csimonin-dev/">
-                                <img className="scale-small linkedin" src={liLogo} alt="LinkedIn"/>
+                                <Img className="scale-small linkedin" src={liLogo} alt="LinkedIn"/>
                             </a>
                         </div>
 
                         <div className="col">
-                            <a href="./resources/CV-clement-simonin.pdf" target="_blank">
-                                <img className="scale-small resume" src={reLogo} alt="Resumé"/>
+                            <a href="http://www.doyoubuzz.com/simonin-clement" target="_blank">
+                                <Img className="scale-small resume" src={reLogo} alt="Resumé"/>
                             </a>
                         </div>
                     </div>

@@ -36,25 +36,14 @@
   src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
 }
 /* Body */
-body {
-  background-color: transparent;
-  /* Hack to enable hardware acceleration*/
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  overflow-x: hidden;
-  /* Konami Code */
-}
-body div.main {
+div.main {
   margin-top: calc(((100vh - calc(25vw + 25vh)) / 2) - 20px);
   margin-top: calc(((100vh - 70vmin) / 2) - 20px);
   background-color: transparent;
   width: 100%;
   height: 100%;
 }
-body div.main .constr {
+div.main .constr {
   max-height: 40px;
   font-family: "Lato", sans-serif;
   background: transparent;
@@ -69,7 +58,7 @@ body div.main .constr {
   letter-spacing: 10px;
   margin-bottom: 1%;
 }
-body div.main .profileCard {
+div.main .profileCard {
   margin: auto;
   background-image: linear-gradient(150deg, #2202ab 0%, #880da6 100%, #467fd5 100%);
   background-size: cover;
@@ -83,10 +72,10 @@ body div.main .profileCard {
   transform-style: preserve-3d;
   transition: all linear 0.1s;
 }
-body div.main .profileCard #avatar {
+div.main .profileCard #avatar {
   width: 100%;
 }
-body div.main .profileCard #avatar img {
+div.main .profileCard #avatar img {
   display: block;
   margin: auto;
   width: 100%;
@@ -96,13 +85,13 @@ body div.main .profileCard #avatar img {
   border-radius: 50%;
   max-width: 45%;
 }
-body div.main .profileCard #catchPhrase {
+div.main .profileCard #catchPhrase {
   margin: auto;
   width: 80%;
   font-family: "Roboto Slab", sans-serif;
   text-align: center;
 }
-body div.main .profileCard #catchPhrase .chrome {
+div.main .profileCard #catchPhrase .chrome {
   background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
   background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
   -webkit-background-size: 200px;
@@ -113,63 +102,49 @@ body div.main .profileCard #catchPhrase .chrome {
   -webkit-animation-iteration-count: infinite;
   text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
 }
-body div.main .profileCard #links {
+div.main .profileCard #links {
   width: 100%;
   /* Hover filter */
 }
-body div.main .profileCard #links img {
+div.main .profileCard #links img {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-body div.main .profileCard #links .scale-small {
+div.main .profileCard #links .scale-small {
   transition: transform .2s;
   height: auto;
   max-width: 50%;
 }
-body div.main .profileCard #links .github:hover,
-body div.main .profileCard #links .github:active,
-body div.main .profileCard #links .resume:hover,
-body div.main .profileCard #links .resume:active {
+div.main .profileCard #links .github:hover,
+div.main .profileCard #links .github:active,
+div.main .profileCard #links .resume:hover,
+div.main .profileCard #links .resume:active {
   transform: scale(1.1);
   filter: invert(100%);
 }
-body div.main .profileCard #links .linkedin:hover {
+div.main .profileCard #links .linkedin:hover {
   transform: scale(1.1);
   filter: brightness(50%) sepia(100) saturate(70) hue-rotate(180deg);
 }
-body div.main .tetris {
+div.main .tetris {
   height: 100%;
   width: 100%;
   transition: all linear 1s 1s;
 }
-body div.main .tetris .game {
+div.main .tetris .game {
   top: 0;
   height: 100%;
   width: 40%;
 }
-body .kcode {
+/* Konami Code */
+.kcode {
   position: absolute;
   left: 50%;
   margin-left: -120px;
   bottom: 0;
   opacity: 0.25;
   filter: alpha(opacity=25);
-}
-.noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
 }
 /**
 Animation de l'opacité au chargement de la page

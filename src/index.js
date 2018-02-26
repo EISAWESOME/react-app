@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Stars = require('./profile.js').Stars;
+const App = require('./modules/app/app.js').App;
 
 import { unregister } from './registerServiceWorker';
 
 ReactDOM.render(
-    <Stars />, document.querySelector('#root'));
+    <App />, document.querySelector('#root')
+);
+
+
 unregister();

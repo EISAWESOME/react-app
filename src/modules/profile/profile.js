@@ -1,24 +1,16 @@
 import React, {Component} from 'react';
 import {Textfit} from 'react-textfit';
-
-import './styles/css/app.css'
+import './styles/css/profile.css'
 import './styles/css/stars.css';
 import './styles/css/achievement.css';
-
 import 'bootstrap/dist/css/bootstrap.css';
-
 import Img from 'react-image';
-
 import ghLogo from './img/github.png';
 import liLogo from './img/linkedin.png';
 import reLogo from './img/resume.png';
 import kcodeLogo from './img/kcode-small.png';
-
-//Howler
 import 'Howler';
 import xbJingle from './resources/sounds/AchievementUnlocked.mp3';
-
-//Konami
 import Konami from 'Konami';
 
 class Profile extends Component {

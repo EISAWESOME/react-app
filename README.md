@@ -1,9 +1,3 @@
-# Not a clue what I'm doing
+Switched to react for the sake of it.
 
-------
-
-- Run a http-server on the build folder
-
-- ???
-
-- $$$ Profit $$$ 
+Would be porte-folio...

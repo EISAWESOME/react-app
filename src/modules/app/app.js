@@ -3,7 +3,7 @@ import './styles/css/app.css'
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Stars = require('../profile/profile.js').Stars;
-const Menu = require('../page/page.js').Menu;
+const Page = require('../page/page.js').Page;
 
 class App extends Component {
 
@@ -15,7 +15,7 @@ class App extends Component {
                     <Stars/>
                 </section>
                 <section id="page" className="row">
-                    <Menu/>
+                    <Page/>
                 </section>
             </Fragment>
         )

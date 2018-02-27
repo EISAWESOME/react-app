@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { unregister } from './registerServiceWorker';
 
 const App = require('./modules/app/app.js').App;
-
-import { unregister } from './registerServiceWorker';
 
 ReactDOM.render(
     <App />, document.querySelector('#root')

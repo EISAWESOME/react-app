@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Textfit} from 'react-textfit';
 import './styles/css/profile.css'
 import './styles/css/stars.css';
@@ -13,7 +13,8 @@ import 'Howler';
 import xbJingle from './resources/sounds/AchievementUnlocked.mp3';
 import Konami from 'Konami';
 
-class Profile extends Component {
+
+class Profile extends React.Component {
 
     render() {
 
@@ -68,7 +69,7 @@ class Profile extends Component {
     }
 }
 
-class Easteregg extends Component {
+class Easteregg extends React.Component {
 
     constructor(props) {
         super(props);
@@ -126,7 +127,8 @@ class Easteregg extends Component {
     }
 }
 
-class Stars extends Component {
+class Stars extends React.Component {
+
     render() {
 
         return (

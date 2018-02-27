@@ -1,0 +1,74 @@
+.vertical-menu {
+  background-color: #d8f9e4;
+  width: 10vw;
+}
+.vertical-menu li {
+  height: 7vh;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.vertical-menu li a {
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-transvertical-menu: uppercase;
+  font-size: 14px;
+}
+.vertical-menu li img {
+  display: block;
+  margin: auto;
+}
+.vertical-menu li:hover {
+  background: #c1e2cd;
+}
+/*
+.vertical-menu li a.profile {
+	border-left:5px solid #008747;
+}
+*/
+.vertical-menu li:first-child a:hover,
+.vertical-menu li:first-child a {
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+.vertical-menu li:last-child a:hover,
+.vertical-menu li:last-child a {
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+.vertical-menu li a:hover i {
+  color: #ea4f35;
+}
+.vertical-menu i {
+  margin-right: 15px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.vertical-menu em {
+  font-size: 10px;
+  background: #ea4f35;
+  padding: 3px 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-style: normal;
+  color: #fff;
+  margin-top: 17px;
+  margin-right: 15px;
+  line-height: 10px;
+  height: 10px;
+  float: right;
+}
+.vertical-menu li.selected a {
+  background: #efefef;
+}
